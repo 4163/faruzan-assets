@@ -2,14 +2,14 @@
 
 Extracted game assets, technical specifications, and interactive visual confirmation gallery for Faruzan from Genshin Impact (v7.1.0 client with recovered v3.6.0 event audio).
 
-## Live preview
-
-Interactive web gallery: https://4163.github.io/faruzan-assets
-
 ## Pipeline and reproduction
 
 These assets were cataloged, extracted, categorized, and documented deterministically using the structured asset extraction pipeline:
 https://github.com/4163/i-asset-extraction
+
+## Live preview
+
+Interactive web gallery: https://4163.github.io/faruzan-assets
 
 ## Asset overview
 
