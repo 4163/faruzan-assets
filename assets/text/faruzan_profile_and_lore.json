@@ -1,0 +1,56 @@
+{
+  "entity": "Faruzan",
+  "title": "Enigmatic Machinist",
+  "honorific": "Madam Faruzan",
+  "rarity": 4,
+  "element": "Anemo",
+  "weapon": "Bow",
+  "constellation": "Flabellum",
+  "darshan": "Haravatat (Semiotics and Linguistics)",
+  "affiliation": "Sumeru Akademiya",
+  "birthday": "August 20",
+  "voice_actors": {
+    "Japanese": "Horie Yui (堀江由衣)",
+    "English": "Chandni Parekh",
+    "Chinese": "Yan Meme (阎么么)",
+    "Korean": "Kim Yu-rim (김유림)"
+  },
+  "character_details": "There is a legend circulating among the students of the Akademiya: If you have failed your mechanics exams and dare not ask your tutor for remedial lessons, you can turn your steps to Haravatat next door and ask Madam Faruzan for guidance. There is no need to prepare any gifts; just bring sincere intent and modesty, and address her respectfully as 'Madam.' That will be enough to get into the good graces of this living encyclopedia of mechanics.",
+  "stories": [
+    {
+      "id": 1,
+      "title": "Character Story 1: Centennial Disappearance",
+      "summary": "Details Faruzan's entrapment in an ancient ruin riddle for a century and her eventual return to modern Sumeru unchanged in physical age."
+    },
+    {
+      "id": 2,
+      "title": "Character Story 2: Culture Shock and Modern Akademiya",
+      "summary": "Explores her difficulty adapting to modern Akademiya administrative structures, revised linguistic curricula, and Kshahrewar technological trends."
+    },
+    {
+      "id": 3,
+      "title": "Character Story 3: Haravatat vs. Kshahrewar",
+      "summary": "Her ongoing theoretical disputes with Kshahrewar scholars who treat mechanics as separate from ancient script linguistics."
+    },
+    {
+      "id": 4,
+      "title": "Character Story 4: Recruitment and Funding Woes",
+      "summary": "Her struggle to recruit research students and secure research grants due to her demanding senior demeanor and esoteric research projects."
+    },
+    {
+      "id": 5,
+      "title": "Character Story 5: Surviving the Century Trap",
+      "summary": "The psychological resolve and intellectual willpower that kept her sane while solving ruin puzzles for one hundred years in isolation."
+    },
+    {
+      "id": 6,
+      "title": "Story Artifact: Mechanical Puzzle Box",
+      "summary": "A handcrafted puzzle box preserved through a century of ruin entrapment, serving as a token of remembrance."
+    },
+    {
+      "id": 7,
+      "title": "Vision Story: Anemo Vision",
+      "summary": "How her Anemo Vision awakened at the breakthrough moment of deciphering the final ancient mechanism and escaping the sealed ruin."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Binary files
+*.png binary
+*.wem binary
+*.fbx binary
+*.obj binary
+*.skel binary
+*.zip binary

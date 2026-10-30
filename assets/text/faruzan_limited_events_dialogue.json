@@ -1,0 +1,35 @@
+{
+  "events_cataloged": [
+    {
+      "version": "3.6",
+      "event": "A Parade of Providence (XYJ / AkaFes)",
+      "quest_groups": [
+        "XYJEQ001",
+        "XYJEQ002",
+        "XYJEQ005",
+        "XYJ_Dialog"
+      ],
+      "voice_lines_recovered": 128,
+      "status": "Recovered from official CDN (Audio_Japanese_3.6.0.zip) and playable in assets/audio/VO_EQ/"
+    },
+    {
+      "version": "4.4",
+      "event": "Receiver of Friends From Afar (ZFEQ)",
+      "status": "Purged from client; documented in meta/manifest.json"
+    },
+    {
+      "version": "4.7",
+      "event": "Ruins Exploration: Fieldwise Center (hzweq)",
+      "quest_groups": [
+        "hzweq003",
+        "hzweq004"
+      ],
+      "status": "Furnishing Puzzlepal (ID 374636) retained in blocks; dialogue purged from live client"
+    },
+    {
+      "version": "5.1",
+      "event": "Chromatic Ode of Candies and Roses (HSEQ)",
+      "status": "Purged from client; documented in meta/manifest.json"
+    }
+  ]
+}

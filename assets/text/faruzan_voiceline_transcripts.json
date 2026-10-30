@@ -1,0 +1,20 @@
+{
+  "entity": "Faruzan",
+  "total_recorded_clips": 790,
+  "audio_format": "Wwise WEM (.wem)",
+  "voice_actor_japanese": "Horie Yui (堀江由衣)",
+  "categories": {
+    "VO_friendship": "Profile & affinity voicelines unlocked through friendship level",
+    "VO_gameplay": "Combat skills, elemental bursts, dashes, sprints, chest unlocks, low HP, and fallen states",
+    "VO_COOP": "Hangout event series VIII dialogue branches and choices",
+    "vo_aq": "Archon Quest Interlude Act III Inversion of Genesis dialogue",
+    "VO_EQ": "Event Quests including 128 recovered v3.6 XYJEQ lines",
+    "VO_Card": "Genius Invokation TCG match interactions and card play callouts",
+    "VO_HS": "Serenitea Pot homeworld conversations",
+    "VO_teamJoin": "Party setup voicelines",
+    "VO_LQ": "Story and legendary quest guest appearances",
+    "VO_spice": "Taste-test reactions for Spices from the West",
+    "vo_freetalk": "Overworld ambient NPC dialogue",
+    "VO_Tower": "Spiral Abyss floor clearing remarks"
+  }
+}

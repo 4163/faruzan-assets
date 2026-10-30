@@ -1,0 +1,180 @@
+{
+  "m_Shader": {
+    "m_FileID": 5,
+    "m_PathID": -4667577925491773833,
+    "Name": "",
+    "IsNull": false
+  },
+  "m_SavedProperties": {
+    "m_TexEnvs": {
+      "_AppearNoise": {
+        "m_Texture": {
+          "m_FileID": 3,
+          "m_PathID": -104055898110601221,
+          "Name": "",
+          "IsNull": false
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_MainTex0": {
+        "m_Texture": {
+          "m_FileID": 4,
+          "m_PathID": 3502351587930577354,
+          "Name": "Gcg_CardFace_Char_Avatar_Faruzan_Layer00",
+          "IsNull": false
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_MainTex1": {
+        "m_Texture": {
+          "m_FileID": 6,
+          "m_PathID": -4246861210215521119,
+          "Name": "",
+          "IsNull": false
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_MainTex2": {
+        "m_Texture": {
+          "m_FileID": 6,
+          "m_PathID": -4246861210215521119,
+          "Name": "",
+          "IsNull": false
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_NormalMap": {
+        "m_Texture": {
+          "m_FileID": 0,
+          "m_PathID": 0,
+          "Name": "",
+          "IsNull": true
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShiningCurve": {
+        "m_Texture": {
+          "m_FileID": 1,
+          "m_PathID": 2210379072666196421,
+          "Name": "",
+          "IsNull": false
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_VoronoiRampMap": {
+        "m_Texture": {
+          "m_FileID": 2,
+          "m_PathID": 5359847078552534944,
+          "Name": "",
+          "IsNull": false
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "m_Ints": null,
+    "m_Floats": {
+      "EMISSION_TYPE": 0.0,
+      "_AppearThreshold": 0.0,
+      "_CardParallax": 0.0,
+      "_DarkenIntensity": 0.0,
+      "_DissolveGroup": 0.0,
+      "_EnableEffects": 0.0,
+      "_FadeAlpha": 1.0,
+      "_GCGSkipTAA": 1.0,
+      "_LayerTintByHeight": 1.0,
+      "_LinearShining": 0.0,
+      "_LinearShiningLayer": 0.0,
+      "_ParallaxMultiplier": 1.0,
+      "_ParallaxScale0": 0.2,
+      "_ParallaxScale1": 0.1,
+      "_ParallaxScale2": 0.025,
+      "_PreProcessGroup": 0.0,
+      "_ShiningCurveID": 0.015625,
+      "_ShiningScale": 0.5,
+      "_ShiningSpeed": 0.2,
+      "_ShiningVoronoiChroma": 1.0,
+      "_ShiningVoronoiScale": 1.0,
+      "_ShortOffset": 0.0,
+      "_ViewDirTimeScale": 0.1,
+      "_VoronoiShining": 0.0,
+      "_ZBias": 0.0
+    },
+    "m_Colors": {
+      "_Layer0Tint": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_Layer1Tint": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_Layer2Tint": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_ShiningVoronoiInputColorClamp": {
+        "r": 0.0,
+        "g": 1.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  },
+  "m_Name": "Gcg_CardFace_Char_Avatar_Faruzan_Normal",
+  "Name": "Gcg_CardFace_Char_Avatar_Faruzan_Normal"
+}

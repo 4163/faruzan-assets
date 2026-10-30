@@ -1,0 +1,12 @@
+g Level_AkaFesRhythm01_0_0_Combine_0_0_1_WaterPlane_1_Vo
+v -17.402771 0 -10.119995
+v -11.25267 0 3.830017
+v 17.337334 0 10.119995
+v 17.402763 0 -10.119995
+vn -0 1 0
+vn -0 1 0
+vn -0 1 0
+vn -0 1 0
+g Level_AkaFesRhythm01_0_0_Combine_0_0_1_WaterPlane_1_Vo_0
+f 2/2/2 3/3/3 4/4/4
+f 4/4/4 1/1/1 2/2/2

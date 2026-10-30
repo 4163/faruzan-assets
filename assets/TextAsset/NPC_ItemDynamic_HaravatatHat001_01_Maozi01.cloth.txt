@@ -1,0 +1,169 @@
+ #  
+ #  Builder :  MDB_Engine_Editor
+ #  Engine :  
+ #  
+
+Version :  0x01000800 ,  20260209 #  1.0.8.0
+
+
+Cloth :  NPC_ItemDynamic_HaravatatHat001_01_Maozi01 ,  Layer_None ,  Isolate #  Name ,  Layer ,  Close|Close_Center|Open|Isolate
+
+    Unit :  Meter #  Centimeter|Meter
+
+
+    Editor
+
+        Chain #  RootBoneName ,  [TailBoneName]
+            Bone_MaoziB01_L ,  Bone_MaoziB02_L
+        End
+
+
+         #  BoneNorm :  0.0000, 1.0000, 0.0000
+
+    End
+
+
+    SupplyAnim :  ByRefPose #  ByAnimPose|ByRefPose|ByHybridPose
+
+     #  Solver :  PBD ,  0 #  PBD|PhysicsPBD|AnimPose|None ,  NumVSpringIters
+
+    GravityRescale :  0.8000
+
+    CalcParticleNorm :  ByBone ,  ByDir #  ByAverage|ByBone|ByRootBone ,  None|ByDir|ByAxisX
+
+     #  CalcTrunkRot :  ByAverage #  ByAverage|ByMajor
+
+     #  TransferMotion :  0.0000, 0.0000 ,  0.0000 ,  0.0000 #  Pos_Move, Pos_Up ,  Rot ,  Enlarge
+
+     #  DragLift :  0.0000 ,  0.0000 #  Drag ,  Lift
+
+
+    SimWind :  0.0150, 0.2000 ,  -1.0000, -1.0000 ,  Disable, Enable, Disable #  Strength, Frequency ,  MaxSpeed, MinSpeed ,  Spot, Circle, Wave
+        BoneSpace :  Bip001 Head ,  False #  BoneName ,  IgnoreRot
+        Simple :  -0.2000, 0.0000, 0.0000 ,  0.0000, 1.0000, 0.0000 ,  0.5000, 0.0000 #  Origin ,  Dir ,  ParticleDirNoisy, PhaseNoisy
+        Circle :  1.0000, 0.0000, 0.0000 ,  1.0000, 1.0000 #  PlaneNorm ,  MaxRescale, MinRescale
+    End
+
+
+    ModifyAnimPose
+
+        ModifyRoot
+            RotRoot :  10.0000 #  Angle
+        End
+    End
+
+
+    CapsuleCollider #  BoneName   ,    Pole_A_BoneSpace ,  Radius_A   ,    Pole_B_BoneSpace ,  Radius_B   ,    None|Inner|Outer, AutoCCD, SoftCol
+        Bone_MaoziA01_L      ,  0.0441, -0.0086, -0.0567 ,  0.0500     ,      0.0441, 0.0385, -0.0399 ,  0.0500     ,      Inner ,  AutoCCD ,  False #  [0]
+    End
+
+
+    VirtEnd :  None #  None|ByDcc|ByParent|ByAxisX|ByOffset
+
+        DccVirtTail :  1 ,  2 #  Particle ,  Quat ,  Pos ,  Parent ,  Tail
+            1 ,  0.0000, 0.0000, 0.0000, 1.0000 ,  -0.0713, 0.0000, 0.0000 ,  Bone_MaoziB01_L ,  Bone_MaoziB02_L
+        End
+    End
+
+
+    ParticleData
+
+        Radius
+            Linear, Auto, None ,  0.0000, 0.0100 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 0.0150 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Damping
+            Linear, Auto, None ,  0.0000, 0.2000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 0.2000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Data :  2 #  Type ,  BoneName     ,      Norm_BoneSpace       ,       Radius, Mass, Friction    ,   DropRate, Damping, InertRate   ,    CompressRate, VirtWidth
+            Root       ,  Bone_MaoziB01_L      ,  0.0000, 1.0000, 0.0000     ,      0.0100, 1.0000, 0.1000     ,      1.0000, 0.2000, 0.5000     ,      0.0000, 0.0000 #  [0]
+            Tail       ,  Bone_MaoziB02_L      ,  0.0000, 1.0000, 0.0000     ,      0.0150, 1.0000, 0.1000     ,      1.0000, 0.2000, 0.5000     ,      0.0000, 0.0000 #  [1]
+        End
+
+    End
+
+
+    SimFix :  1 #  [1]
+        0 #  [1]
+    End
+
+
+    Chain
+
+        Data :  1
+
+            Chain #  [0]
+                Particle :  0, 1 #  [2]
+            End
+
+        End
+
+    End
+
+
+    Elastic
+
+        Stiffness
+            Linear, Auto, None ,  0.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Data :  1 #  Base, Curr ,  Stiff
+            0, 1 ,  0.3000 #  [0]
+        End
+
+    End
+
+
+    Rigid
+
+        Stiffness
+            Linear, Auto, None ,  0.0000, 0.4000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 0.4000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Data :  1 #  Head, Base, Curr ,  Stiff
+            -1, 0, 1 ,  0.4000 #  [0]
+        End
+
+    End
+
+
+    Angle
+
+        Stiffness
+            Linear, Auto, None ,  0.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        LimitDegree
+            Linear, Auto, None ,  0.0000, 50.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 50.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Data :  1 #  Base, Curr ,  Stiff, Radian ,  [VEllipse, HEllipse]
+            0, 1 ,  1.0000 ,  0.8727 #  [0]
+        End
+
+    End
+
+
+    CstConfig :  Auto #  Auto|Collide|SoftBody|Customize
+        Elastic
+        Rigid
+        Angle
+        Collide
+        Stretch
+    End
+
+End
+

@@ -1,0 +1,114 @@
+{
+  "pipeline_stage": "Stage 4: Presentation and visualization specification",
+  "stage_status": "Stage 4 visualization specification drafted: 13 Category B compound clusters mapped to concrete rendering pipelines, shader parameters, bone hierarchies, Spine 4.0 runtime bindings, and viewer architecture recommendations in specs/visualization-spec.md",
+  "scope_specification": {
+    "target": "Faruzan",
+    "avatar_id": 10000076,
+    "in_scope_audio": "Japanese (Horie Yui / 堀江由衣)",
+    "out_of_scope_audio": "English (Chandni Parekh), Chinese (Yan Meme), Korean (Kim Yu-rim) - Documented"
+  },
+  "identity_registry": {
+    "entity_name": "Faruzan",
+    "localized_names": {
+      "en": "Faruzan",
+      "ja": "ファルザン",
+      "zh-cn": "珐露珊",
+      "zh-tw": "琺露珊",
+      "ko": "파루잔"
+    },
+    "titles": {
+      "en": "Enigmatic Machinist",
+      "ja": "機巧の深思",
+      "zh-cn": "机巧全书",
+      "ko": "기교의 심오함"
+    },
+    "honorifics": [
+      "Madam Faruzan",
+      "Senior",
+      "先輩",
+      "先辈",
+      "선배"
+    ],
+    "avatar_id": 10000076,
+    "avatar_slug": "Faruzan",
+    "model_slug": "Avatar_Girl_Bow_Faruzan",
+    "body_type": "BODY_GIRL",
+    "weapon_type": "WEAPON_BOW",
+    "element": "Anemo",
+    "rarity": 4,
+    "default_costume_id": 207601,
+    "skill_depot_id": 7601,
+    "namecard_id": 210144,
+    "special_dish_id": 108488,
+    "voice_actors": {
+      "ja": {
+        "name": "Horie Yui",
+        "native": "堀江由衣",
+        "scope": "in_scope"
+      },
+      "en": {
+        "name": "Chandni Parekh",
+        "native": "Chandni Parekh",
+        "scope": "out_of_scope"
+      },
+      "zh": {
+        "name": "Yan Meme",
+        "native": "阎么么",
+        "scope": "out_of_scope"
+      },
+      "ko": {
+        "name": "Kim Yu-rim",
+        "native": "김유림",
+        "scope": "out_of_scope"
+      }
+    }
+  },
+  "verification_metrics": {
+    "cataloged_equal_referenced": true,
+    "unresolved_dangling_paths": 0,
+    "total_cataloged_assets": 56
+  },
+  "stage_2_metrics": {
+    "total_extracted_files": 1660,
+    "category_summary": {
+      "configuration": 46,
+      "animation": 514,
+      "texture_ui": 138,
+      "mesh": 107,
+      "texture_3d": 47,
+      "spine_skeleton": 2,
+      "material": 12,
+      "audio": 790,
+      "text": 4
+    },
+    "recovered_purged_audio": 128,
+    "remaining_purged_audio": 131,
+    "limited_events_extracted_assets": 158
+  },
+  "stage_3_metrics": {
+    "category_a_standalone_organized_total": 932,
+    "category_a_breakdown": {
+      "audio_files": 790,
+      "graphics_files": 138,
+      "text_catalogs": 4
+    },
+    "category_b_compound_preserved_total": 727,
+    "category_b_breakdown": {
+      "character_animations": 514,
+      "3d_meshes_and_lods": 107,
+      "3d_textures_and_ramps": 47,
+      "material_graphs": 13,
+      "physics_and_cloth_configs": 43,
+      "spine_puppets": 2,
+      "minigame_state_models": 1
+    },
+    "dual_use_items_cataloged": 5,
+    "deliverable_spec": "specs/dependent-assets.md"
+  },
+  "stage_4_metrics": {
+    "compound_clusters_specified": 13,
+    "total_compound_assets": 728,
+    "spine_runtime_version": "4.0.47",
+    "deliverable_spec": "specs/visualization-spec.md"
+  }
+}

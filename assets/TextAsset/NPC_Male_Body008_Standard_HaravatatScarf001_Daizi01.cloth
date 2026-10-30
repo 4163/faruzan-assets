@@ -1,0 +1,226 @@
+ #  
+ #  Builder :  MDB_Engine_Editor
+ #  Engine :  
+ #  
+
+Version :  0x01000800 ,  20260209 #  1.0.8.0
+
+
+Cloth :  NPC_Male_Body008_Standard_HaravatatScarf001_Daizi01 ,  Layer_None ,  Isolate #  Name ,  Layer ,  Close|Close_Center|Open|Isolate
+
+    Unit :  Meter #  Centimeter|Meter
+
+
+    Editor
+
+        Chain #  RootBoneName ,  [TailBoneName]
+            Bone_Body008_Standard_HaravatatScarf001_DaiziA01_R ,  Bone_Body008_Standard_HaravatatScarf001_DaiziA04_R
+            Bone_Body008_Standard_HaravatatScarf001_DaiziB01_R ,  Bone_Body008_Standard_HaravatatScarf001_DaiziB04_R
+        End
+
+
+         #  BoneNorm :  0.0000, 1.0000, 0.0000
+
+    End
+
+
+    SupplyAnim :  ByRefPose #  ByAnimPose|ByRefPose|ByHybridPose
+
+     #  Solver :  PBD ,  0 #  PBD|PhysicsPBD|AnimPose|None ,  NumVSpringIters
+
+    GravityRescale :  0.8000
+
+    CalcParticleNorm :  ByBone ,  ByDir #  ByAverage|ByBone|ByRootBone ,  None|ByDir|ByAxisX
+
+     #  CalcTrunkRot :  ByAverage #  ByAverage|ByMajor
+
+    TransferMotion :  0.4000, 0.2000 ,  0.3000 ,  0.0000 #  Pos_Move, Pos_Up ,  Rot ,  Enlarge
+
+    DragLift :  0.2000 ,  0.1000 #  Drag ,  Lift
+
+
+    SimWind :  0.0150, 0.1500 ,  1.0000, 1.0000 ,  Disable, Enable, Disable #  Strength, Frequency ,  MaxSpeed, MinSpeed ,  Spot, Circle, Wave
+        BoneSpace :  Bip001 Spine1 ,  False #  BoneName ,  IgnoreRot
+        Simple :  0.1000, 0.0000, -0.0200 ,  0.0000, -1.0000, 0.0000 ,  0.0000, 0.0000 #  Origin ,  Dir ,  ParticleDirNoisy, PhaseNoisy
+        Spot :  1.0000 #  FadeDist
+        Circle :  0.9949, -0.1004, 0.0000 ,  -1.0000, -1.0000 #  PlaneNorm ,  MaxRescale, MinRescale
+    End
+
+
+    ModifyAnimPose
+    End
+
+
+    CapsuleCollider #  BoneName   ,    Pole_A_BoneSpace ,  Radius_A   ,    Pole_B_BoneSpace ,  Radius_B   ,    None|Inner|Outer, AutoCCD, SoftCol
+        Bip001 Spine1        ,  -0.0700, -0.0300, -0.0650 ,  0.1000     ,      -0.0700, -0.0300, 0.0650 ,  0.1000     ,      Inner ,  AutoCCD ,  False #  [0]
+        Bip001 Spine         ,  -0.0273, -0.0250, -0.0450 ,  0.1100     ,      -0.0273, -0.0250, 0.0450 ,  0.1100     ,      Inner ,  AutoCCD ,  False #  [1]
+        Bip001 Spine         ,  -0.1030, -0.0300, -0.0470 ,  0.1100     ,      -0.1030, -0.0300, 0.0470 ,  0.1100     ,      Inner ,  AutoCCD ,  False #  [2]
+        Bip001 Spine1        ,  0.0009, -0.0276, -0.0550 ,  0.1050     ,      0.0009, -0.0276, 0.0550 ,  0.1050     ,      Inner ,  AutoCCD ,  False #  [3]
+    End
+
+
+    ColWithSim
+        SimPoseCol :  VirtEdge ,  1 ,  Disable ,  Disable #  Regular|VirtEdge|VirtMesh|VirtAll ,  NumIters ,  HCollide ,  VEdgeCCD
+    End
+
+
+    VirtEnd :  None #  None|ByDcc|ByParent|ByAxisX|ByOffset
+
+        DccVirtTail :  2 ,  8 #  Particle ,  Quat ,  Pos ,  Parent ,  Tail
+            3 ,  0.0000, 0.0000, 0.0000, 1.0000 ,  -0.0915, 0.0000, 0.0000 ,  Bone_Body008_Standard_HaravatatScarf001_DaiziA03_R ,  Bone_Body008_Standard_HaravatatScarf001_DaiziA04_R
+            7 ,  0.0000, 0.0000, 0.0000, 1.0000 ,  -0.0820, 0.0000, 0.0000 ,  Bone_Body008_Standard_HaravatatScarf001_DaiziB03_R ,  Bone_Body008_Standard_HaravatatScarf001_DaiziB04_R
+        End
+    End
+
+
+    ParticleData
+
+        Radius
+            Linear, Auto, None ,  0.0000, 0.0120 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 0.0120 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Mass
+            Linear, Auto, None ,  0.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        DropRate
+            Linear, Auto, None ,  0.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Damping
+            Linear, Auto, None ,  0.0000, 0.2000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        InertRate
+            Linear, Auto, None ,  0.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        VirtWidth
+            Linear, Auto, None ,  0.0000, 0.0300 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 0.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Data :  8 #  Type ,  BoneName     ,      Norm_BoneSpace       ,       Radius, Mass, Friction    ,   DropRate, Damping, InertRate   ,    CompressRate, VirtWidth
+            Root       ,  Bone_Body008_Standard_HaravatatScarf001_DaiziA01_R ,  0.0000, 1.0000, 0.0000     ,      0.0120, 1.0000, 0.1000     ,      1.0000, 0.2000, 0.3000     ,      0.0000, 0.0300 #  [0]
+            Regular    ,  Bone_Body008_Standard_HaravatatScarf001_DaiziA02_R ,  0.0000, 1.0000, 0.0000     ,      0.0120, 1.0000, 0.1000     ,      1.0000, 0.2333, 0.3000     ,      0.0000, 0.0200 #  [1]
+            Regular    ,  Bone_Body008_Standard_HaravatatScarf001_DaiziA03_R ,  0.0000, 1.0000, 0.0000     ,      0.0120, 1.0000, 0.1000     ,      1.0000, 0.2667, 0.3000     ,      0.0000, 0.0100 #  [2]
+            Tail       ,  Bone_Body008_Standard_HaravatatScarf001_DaiziA04_R ,  0.0000, 1.0000, 0.0000     ,      0.0120, 1.0000, 0.1000     ,      1.0000, 0.3000, 0.3000     ,      0.0000, 0.0000 #  [3]
+            Root       ,  Bone_Body008_Standard_HaravatatScarf001_DaiziB01_R ,  0.0000, 1.0000, 0.0000     ,      0.0120, 1.0000, 0.1000     ,      1.0000, 0.2000, 0.3000     ,      0.0000, 0.0300 #  [4]
+            Regular    ,  Bone_Body008_Standard_HaravatatScarf001_DaiziB02_R ,  0.0000, 1.0000, 0.0000     ,      0.0120, 1.0000, 0.1000     ,      1.0000, 0.2299, 0.3000     ,      0.0000, 0.0210 #  [5]
+            Regular    ,  Bone_Body008_Standard_HaravatatScarf001_DaiziB03_R ,  0.0000, 1.0000, 0.0000     ,      0.0120, 1.0000, 0.1000     ,      1.0000, 0.2598, 0.3000     ,      0.0000, 0.0121 #  [6]
+            Tail       ,  Bone_Body008_Standard_HaravatatScarf001_DaiziB04_R ,  0.0000, 1.0000, 0.0000     ,      0.0120, 1.0000, 0.1000     ,      1.0000, 0.2897, 0.3000     ,      0.0000, 0.0031 #  [7]
+        End
+
+    End
+
+
+    SimFix :  1 #  [2]
+        0, 4 #  [2]
+    End
+
+
+    Chain
+
+        Data :  2
+
+            Chain #  [0]
+                Particle :  0, 1, 2, 3 #  [4]
+            End
+
+
+            Chain #  [1]
+                Particle :  4, 5, 6, 7 #  [4]
+            End
+
+        End
+
+    End
+
+
+    Elastic
+
+        Stiffness
+            Linear, Auto, None ,  0.0000, 0.2000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 0.2500 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Data :  6 #  Base, Curr ,  Stiff
+            0, 1 ,  0.2167 #  [0]
+            1, 2 ,  0.2333 #  [1]
+            2, 3 ,  0.2500 #  [2]
+            4, 5 ,  0.2149 #  [3]
+            5, 6 ,  0.2299 #  [4]
+            6, 7 ,  0.2448 #  [5]
+        End
+
+    End
+
+
+    Rigid
+
+        Stiffness
+            Linear, Auto, None ,  0.0000, 0.5000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 0.5000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Data :  6 #  Head, Base, Curr ,  Stiff
+            -1, 0, 1 ,  0.5000 #  [0]
+            0, 1, 2 ,  0.5000 #  [1]
+            1, 2, 3 ,  0.5000 #  [2]
+            -1, 4, 5 ,  0.5000 #  [3]
+            4, 5, 6 ,  0.5000 #  [4]
+            5, 6, 7 ,  0.5000 #  [5]
+        End
+
+    End
+
+
+    Angle
+
+        Stiffness
+            Linear, Auto, None ,  0.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        LimitDegree
+            Linear, Auto, None ,  0.0000, 30.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+            Linear, Auto, None ,  1.0000, 50.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+        End
+
+
+        Data :  6 #  Base, Curr ,  Stiff, Radian ,  [VEllipse, HEllipse]
+            0, 1 ,  1.0000 ,  0.6400 #  [0]
+            1, 2 ,  1.0000 ,  0.7563 #  [1]
+            2, 3 ,  1.0000 ,  0.8727 #  [2]
+            4, 5 ,  1.0000 ,  0.6279 #  [3]
+            5, 6 ,  1.0000 ,  0.7323 #  [4]
+            6, 7 ,  1.0000 ,  0.8366 #  [5]
+        End
+
+    End
+
+
+    CstConfig :  Auto #  Auto|Collide|SoftBody|Customize
+        Elastic
+        Rigid
+        Angle
+        Collide
+        Stretch
+    End
+
+End
+

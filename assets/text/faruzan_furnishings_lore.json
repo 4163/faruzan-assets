@@ -1,0 +1,58 @@
+{
+  "furnishings": [
+    {
+      "id": 374636,
+      "name_en": "Puzzlepal: 'Keep Calm and Carry On'",
+      "name_zh": "解谜伙伴-「紧张走开」",
+      "name_ja": "謎解きのパートナー‐「さよなら、緊張」",
+      "category": "Landscape / Large Object",
+      "quality": 4,
+      "adeptal_energy": 90,
+      "load": 450,
+      "origin_event": "Ruins Exploration: Fieldwise Center (v4.7)",
+      "permanent_source": "Realm Depot (240 Realm Currency)",
+      "description": "A doll modeled on Faruzan combined with a popular Floating Hydro Fungus toy beloved by students. It is fully equipped for autonomous operation, featuring built-in walking mechanisms, weight sensors, terrain recognition, and remote control capabilities. A collaboration between the Puzzlers' League and the Symposium on Ruin Mechanisms, this Puzzlepal is a high-tech creation that retains its adorable charm, easing frayed nerves even in dark, creepy ruins.",
+      "associated_assets": {
+        "mesh_visible": "assets/Mesh/Beyd_Object_Prop_RenOu_01_Vo.obj",
+        "mesh_collision": "assets/Mesh/Beyd_Object_Prop_RenOu_01_Col.obj",
+        "texture_diffuse": "assets/Texture2D/Beyd_Object_Prop_RenOu_01_Diffuse.png",
+        "texture_normal": "assets/Texture2D/Beyd_Object_Prop_RenOu_01_Normal.png",
+        "texture_smbe": "assets/Texture2D/Beyd_Object_Prop_RenOu_01_SMBE.png",
+        "material_json": "assets/Material/Beyd_Object_Prop_RenOu_01.json",
+        "furnishing_icon": "assets/textures/furnishing_icons/UI_Homeworld_Ani_Exterior_Ndkl_Decoration_Prop_Renou_01.png",
+        "minigame_gadget_icon": "assets/textures/furnishing_icons/UI_Beyd_Gadget_Prop_RenOu_01.png"
+      }
+    },
+    {
+      "id": 363328,
+      "name_en": "Omni-Directional Astrolabe",
+      "name_zh": "全景罗盘 / 学院庆典罗盘",
+      "name_ja": "全方位アストロラーベ",
+      "category": "Interior / Decoration",
+      "quality": 4,
+      "origin_event": "A Parade of Providence (v3.6)",
+      "description": "A precision astrolabe instrument created during the Akademiya Extravaganza Interdarshan Championship. Employs multi-axis brass rings to project celestial and regional coordinates.",
+      "associated_assets": {
+        "mesh_lod0": "assets/Mesh/Homeworld_Interior_Xm_Decoration_Prop_XyjLuopan_01_Lod0.obj",
+        "mesh_lod1": "assets/Mesh/Homeworld_Interior_Xm_Decoration_Prop_XyjLuopan_01_Lod1.obj",
+        "mesh_col": "assets/Mesh/Homeworld_Interior_Xm_Decoration_Prop_XyjLuopan_01_Col.obj"
+      }
+    }
+  ],
+  "props_and_equipment": [
+    {
+      "name": "Archaeological Radar Detector",
+      "internal_name": "Property_Ani_Prop_AkaFesArchaeologyDetector_01",
+      "origin_event": "A Parade of Providence (v3.6 In Search of Reality)",
+      "description": "A directional ruin mechanism resonance probe designed by Faruzan for the Haravatat archaeological search challenge."
+    },
+    {
+      "name": "Haravatat Official Darshan Uniform Hat & Scarf",
+      "internal_names": [
+        "NPC_ItemDynamic_HaravatatHat001_Model",
+        "Body008_Standard_HaravatatScarf001"
+      ],
+      "description": "Formal Akademiya scholastic attire bearing Haravatat Darshan insignia and runes."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# OS and environment
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Scratch & logs
+*.tmp
+*.log
+server.py
+
+# Heavy animation clips (distributed via GitHub Releases attachment)
+*.anim

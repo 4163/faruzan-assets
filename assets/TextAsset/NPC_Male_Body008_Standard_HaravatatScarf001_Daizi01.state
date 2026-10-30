@@ -1,0 +1,265 @@
+ #  
+ #  Builder :  MDB_Engine_Editor
+ #  Engine :  
+ #  
+
+Version :  0x01000800 ,  20260209 #  1.0.8.0
+
+
+StateSet #  [2]
+
+    Unit :  Meter #  Centimeter|Meter
+
+
+    InitState :  -1 #  None
+
+
+    State :  Run #  [0]
+
+        TransiteState
+
+            AnimLayer_ED :  0 #  LayerIndex
+                Swm
+                SwmG|ekd
+            End
+
+        End
+
+
+        SimWind :  0.0000, 0.1500 ,  1.0000, 1.0000 ,  Disable, Enable, Disable #  Strength, Frequency ,  MaxSpeed, MinSpeed ,  Spot, Circle, Wave
+            Simple :  0.1000, 0.0000, -0.0200 ,  0.0000, -1.0000, 0.0000 #  Origin ,  Dir ,  ParticleDirNoisy, PhaseNoisy
+            Circle :  0.9949, -0.1004, 0.0000 #  PlaneNorm ,  MaxRescale, MinRescale
+        End
+
+
+        CapsuleCollider #  Index ,  Pole_A_BoneSpace ,  Radius_A   ,    Pole_B_BoneSpace ,  Radius_B   ,    SoftCol
+            0 ,  -0.0700, -0.0300, -0.0650 ,  0.1000     ,      -0.0700, -0.0300, 0.0650 ,  0.1000 #  [0]
+            1 ,  -0.0273, -0.0250, -0.0450 ,  0.1100     ,      -0.0273, -0.0250, 0.0450 ,  0.1100 #  [1]
+            2 ,  -0.1030, -0.0300, -0.0470 ,  0.1100     ,      -0.1030, -0.0300, 0.0470 ,  0.1100 #  [2]
+            3 ,  0.0009, -0.0276, -0.0550 ,  0.1050     ,      0.0009, -0.0276, 0.0550 ,  0.1050 #  [3]
+        End
+
+        GravityRescale :  0.8000
+        TransferMotion :  1.0000, 0.2000 ,  0.3000 ,  0.0000 #  Pos_Move, Pos_Up ,  Rot ,  Enlarge
+        DragLift :  0.2000 ,  0.1000 #  Drag ,  Lift
+
+        ParticleData
+
+            Mass
+                Linear, Auto, None ,  0.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data_Mass :  1 #  [8]
+                1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000 #  [8]
+            End
+
+
+            Damping
+                Linear, Auto, None ,  0.0000, 0.2000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data_Damping :  1 #  [8]
+                0.2000, 0.2333, 0.2667, 0.3000, 0.2000, 0.2299, 0.2598, 0.2897 #  [8]
+            End
+
+
+            InertRate
+                Linear, Auto, None ,  0.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data_InertRate :  1 #  [8]
+                0.3000, 0.3000, 0.3000, 0.3000, 0.3000, 0.3000, 0.3000, 0.3000 #  [8]
+            End
+
+
+            VirtWidth
+                Linear, Auto, None ,  0.0000, 0.0300 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 0.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data_VirtWidth :  1 #  [8]
+                0.0300, 0.0200, 0.0100, 0.0000, 0.0300, 0.0210, 0.0121, 0.0031 #  [8]
+            End
+
+        End
+
+
+        Elastic
+
+            Stiffness
+                Linear, Auto, None ,  0.0000, 0.2000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 0.2500 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data :  1 #  [6]
+                0.2167, 0.2333, 0.2500, 0.2149, 0.2299, 0.2448 #  [6]
+            End
+
+        End
+
+
+        Rigid
+
+            Stiffness
+                Linear, Auto, None ,  0.0000, 0.5000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 0.5000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data :  1 #  [6]
+                0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000 #  [6]
+            End
+
+        End
+
+
+        Angle
+
+            Stiffness
+                Linear, Auto, None ,  0.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data :  1 #  [6]
+                1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000 #  [6]
+            End
+
+        End
+
+    End
+
+
+    State :  Walk #  [1]
+
+        TransiteState
+
+            AnimLayer_ED :  0 #  LayerIndex
+                Vcoo
+                VcooFdmg
+            End
+
+        End
+
+
+        SimWind :  0.0000, 0.1500 ,  1.0000, 1.0000 ,  Disable, Enable, Disable #  Strength, Frequency ,  MaxSpeed, MinSpeed ,  Spot, Circle, Wave
+            Simple :  0.1000, 0.0000, -0.0200 ,  0.0000, -1.0000, 0.0000 #  Origin ,  Dir ,  ParticleDirNoisy, PhaseNoisy
+            Circle :  0.9949, -0.1004, 0.0000 #  PlaneNorm ,  MaxRescale, MinRescale
+        End
+
+
+        CapsuleCollider #  Index ,  Pole_A_BoneSpace ,  Radius_A   ,    Pole_B_BoneSpace ,  Radius_B   ,    SoftCol
+            0 ,  -0.0700, -0.0300, -0.0650 ,  0.0000     ,      -0.0700, -0.0300, 0.0650 ,  0.0000 #  [0]
+            1 ,  -0.0273, -0.0250, -0.0450 ,  0.1100     ,      -0.0273, -0.0250, 0.0450 ,  0.1100 #  [1]
+            2 ,  -0.1030, -0.0300, -0.0470 ,  0.1100     ,      -0.1030, -0.0300, 0.0470 ,  0.1100 #  [2]
+            3 ,  0.0009, -0.0276, -0.0550 ,  0.1050     ,      0.0009, -0.0276, 0.0550 ,  0.1050 #  [3]
+        End
+
+        GravityRescale :  0.8000
+        TransferMotion :  1.0000, 0.2000 ,  0.3000 ,  0.0000 #  Pos_Move, Pos_Up ,  Rot ,  Enlarge
+        DragLift :  0.2000 ,  0.1000 #  Drag ,  Lift
+
+        ParticleData
+
+            Mass
+                Linear, Auto, None ,  0.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data_Mass :  1 #  [8]
+                1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000 #  [8]
+            End
+
+
+            Damping
+                Linear, Auto, None ,  0.0000, 0.2000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data_Damping :  1 #  [8]
+                0.2000, 0.2333, 0.2667, 0.3000, 0.2000, 0.2299, 0.2598, 0.2897 #  [8]
+            End
+
+
+            InertRate
+                Linear, Auto, None ,  0.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 0.3000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data_InertRate :  1 #  [8]
+                0.3000, 0.3000, 0.3000, 0.3000, 0.3000, 0.3000, 0.3000, 0.3000 #  [8]
+            End
+
+
+            VirtWidth
+                Linear, Auto, None ,  0.0000, 0.0300 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 0.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data_VirtWidth :  1 #  [8]
+                0.0300, 0.0200, 0.0100, 0.0000, 0.0300, 0.0210, 0.0121, 0.0031 #  [8]
+            End
+
+        End
+
+
+        Elastic
+
+            Stiffness
+                Linear, Auto, None ,  0.0000, 0.2000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 0.2500 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data :  1 #  [6]
+                0.2167, 0.2333, 0.2500, 0.2149, 0.2299, 0.2448 #  [6]
+            End
+
+        End
+
+
+        Rigid
+
+            Stiffness
+                Linear, Auto, None ,  0.0000, 0.5000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 0.5000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data :  1 #  [6]
+                0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000 #  [6]
+            End
+
+        End
+
+
+        Angle
+
+            Stiffness
+                Linear, Auto, None ,  0.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [0]
+                Linear, Auto, None ,  1.0000, 1.0000 ,  0.0000, 0.0000 ,  0.0000, 0.0000 #  [1]
+            End
+
+
+            Data :  1 #  [6]
+                1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000 #  [6]
+            End
+
+        End
+
+    End
+
+End
+

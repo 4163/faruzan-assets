@@ -1,0 +1,160 @@
+{
+  "m_Shader": {
+    "m_FileID": 1,
+    "m_PathID": -7151098667856979599,
+    "Name": "",
+    "IsNull": false
+  },
+  "m_SavedProperties": {
+    "m_TexEnvs": {
+      "_AppearNoise": {
+        "m_Texture": {
+          "m_FileID": 2,
+          "m_PathID": -104055898110601221,
+          "Name": "",
+          "IsNull": false
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_EmissionTex": {
+        "m_Texture": {
+          "m_FileID": 0,
+          "m_PathID": 0,
+          "Name": "",
+          "IsNull": true
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_GradientMap": {
+        "m_Texture": {
+          "m_FileID": 0,
+          "m_PathID": 0,
+          "Name": "",
+          "IsNull": true
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_MainTex": {
+        "m_Texture": {
+          "m_FileID": 3,
+          "m_PathID": 6664616326805788379,
+          "Name": "Gcg_CardFace_Char_Avatar_Faruzan_Spine",
+          "IsNull": false
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_NormalMap": {
+        "m_Texture": {
+          "m_FileID": 0,
+          "m_PathID": 0,
+          "Name": "",
+          "IsNull": true
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "_ShiningCurve": {
+        "m_Texture": {
+          "m_FileID": 0,
+          "m_PathID": 0,
+          "Name": "",
+          "IsNull": true
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "m_Ints": null,
+    "m_Floats": {
+      "EMISSION_TYPE": 0.0,
+      "_AppearThreshold": 0.0,
+      "_CutOutThreshold": 0.5,
+      "_DarkenIntensity": 0.0,
+      "_DissolveGroup": 0.0,
+      "_EmissionMulAlbedo": 1.0,
+      "_EnableEffects": 0.0,
+      "_EnableGradientMapForEmission": 0.0,
+      "_EnbaleEmissionByTexAlpha": 0.0,
+      "_FadeAlpha": 1.0,
+      "_GradientMapScale": 1.0,
+      "_IgnoreBaseColorInGradientMapEmissionArea": 0.0,
+      "_LinearShining": 0.0,
+      "_PreProcessGroup": 0.0,
+      "_ShiningScale": 0.5,
+      "_ShiningSpeed": 0.2,
+      "_ShiningVoronoiScale": 1.0,
+      "_SpineDissolveEmissionRange": 15.0,
+      "_Stencil": 80.0,
+      "_TintMapGroup": 0.0,
+      "_VoronoiShining": 0.0
+    },
+    "m_Colors": {
+      "_EmissionByTexAlphaColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_Layer0Tint": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_SpineDissolveEmissionCol": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "_TintColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      }
+    }
+  },
+  "m_Name": "Gcg_CardFace_Char_Avatar_Faruzan_Spine_Material",
+  "Name": "Gcg_CardFace_Char_Avatar_Faruzan_Spine_Material"
+}
