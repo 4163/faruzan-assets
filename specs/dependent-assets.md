@@ -1,6 +1,6 @@
 # Dependent and compound assets specification: Faruzan
 
-Project: [`workspace/genshin-impact-faruzan`](workspace/genshin-impact-faruzan)  
+Project: [faruzan-assets](https://github.com/4163/faruzan-assets)  
 Client target: Genshin Impact v7.1.0  
 Entity: Faruzan (`AvatarId: 10000076`)  
 Stage: Stage 3 Asset Categorization
@@ -9,32 +9,32 @@ Stage: Stage 3 Asset Categorization
 
 ## 1. Asset categorization summary and accounting
 
-In Stage 3 of the pipeline, all assets extracted into [`assets/`](assets) were audited and partitioned into two categories without duplicating files across separate directories:
+In Stage 3 of the pipeline, all assets extracted into `assets/` were audited and partitioned into two categories without duplicating files across separate directories:
 
-- **Category A (Standalone assets organized in-place):** 932 files (151.63 MB) functioning independently without runtime dependencies. These were relocated in-place into structured directories under [`assets/audio/`](assets/audio), [`assets/textures/`](assets/textures), and [`assets/text/`](assets/text).
+- **Category A (Standalone assets organized in-place):** 932 files (151.63 MB) functioning independently without runtime dependencies. These were relocated in-place into structured directories under `assets/audio/`, `assets/textures/`, and `assets/text/`.
 - **Category B (Dependent and compound assets preserved in original structure):** 728 files (2,007.41 MB) comprising multi-file clusters (3D meshes, skeleton rigs, cel ramps, materials, cloth configs, animation clips, and Spine puppet definitions) that require runtime engine graphs. These remain anchored in their original extracted package hierarchy to preserve relative file linkages.
 
 ### Accounting ledger
 
 | Category | Domain | Files | Formats | Location in assets |
 |---|---|---|---|---|
-| **Category A** | Audio | 790 | `.wem` | [`assets/audio/`](assets/audio) |
-| **Category A** | Graphics | 138 | `.png` | [`assets/textures/`](assets/textures) |
-| **Category A** | Text and Lore | 4 | `.json` | [`assets/text/`](assets/text) |
-| **Category B** | Character Animations | 514 | `.anim` | [`assets/AnimationClip/`](assets/AnimationClip) and hash folders |
-| **Category B** | 3D Meshes and LODs | 107 | `.obj`, `.fbx` | [`assets/Mesh/`](assets/Mesh), [`assets/Animator/`](assets/Animator), and hash folders |
-| **Category B** | 3D Textures and Ramps | 47 | `.png` | [`assets/Texture2D/`](assets/Texture2D) and hash folders |
-| **Category B** | Materials and Shaders | 12 | `.json` | [`assets/Material/`](assets/Material) |
-| **Category B** | Physics and Cloth Configs | 45 | `.json`, `.cloth`, `.state` | [`assets/TextAsset/`](assets/TextAsset), [`assets/MonoBehaviour/`](assets/MonoBehaviour), and hash folders |
-| **Category B** | 2D Spine Puppets | 2 | `.skel`, `.atlas` | [`assets/`](assets) root |
-| **Category B** | State Models | 1 | `.txt` | [`assets/TextAsset/`](assets/TextAsset) |
+| **Category A** | Audio | 790 | `.wem` | `assets/audio/` |
+| **Category A** | Graphics | 138 | `.png` | `assets/textures/` |
+| **Category A** | Text and Lore | 4 | `.json` | `assets/text/` |
+| **Category B** | Character Animations | 514 | `.anim` | `assets/AnimationClip/` and hash folders |
+| **Category B** | 3D Meshes and LODs | 107 | `.obj`, `.fbx` | `assets/Mesh/`, `assets/Animator/`, and hash folders |
+| **Category B** | 3D Textures and Ramps | 47 | `.png` | `assets/Texture2D/` and hash folders |
+| **Category B** | Materials and Shaders | 12 | `.json` | `assets/Material/` |
+| **Category B** | Physics and Cloth Configs | 45 | `.json`, `.cloth`, `.state` | `assets/TextAsset/`, `assets/MonoBehaviour/`, and hash folders |
+| **Category B** | 2D Spine Puppets | 2 | `.skel`, `.atlas` | `assets/` root |
+| **Category B** | State Models | 1 | `.txt` | `assets/TextAsset/` |
 | **Total Inventory** | | **1,660** | | |
 
 ---
 
 ## 2. Pre-organization directory trace
 
-To retain complete provenance after in-place reorganization, the state of the initial mirrored extraction was recorded prior to moving standalone files. The full machine-readable audit is preserved in [`meta/pre_cleaning_snapshot.json`](meta/pre_cleaning_snapshot.json).
+To retain complete provenance after in-place reorganization, the state of the initial mirrored extraction was recorded prior to moving standalone files. The full machine-readable audit is preserved in `meta/pre_cleaning_snapshot.json`.
 
 ### Initial extraction metrics
 
@@ -61,7 +61,7 @@ To retain complete provenance after in-place reorganization, the state of the in
 
 ## 3. Provenance ledger
 
-Every standalone file relocated out of its initial package directory is recorded in [`meta/provenance_ledger.json`](meta/provenance_ledger.json). The ledger tracks original extraction paths, destination paths, file sizes, and SHA-256 hashes.
+Every standalone file relocated out of its initial package directory is recorded in `meta/provenance_ledger.json`. The ledger tracks original extraction paths, destination paths, file sizes, and SHA-256 hashes.
 
 ### Relocation summary
 
@@ -89,48 +89,48 @@ Every standalone file relocated out of its initial package directory is recorded
 
 Category A assets require no runtime bone rigs, shaders, or dependency graphs to play or view.
 
-### 4.1 Audio ([`assets/audio/`](assets/audio))
+### 4.1 Audio (`assets/audio/`)
 
 790 playable Wwise `.wem` clips (104.99 MB) voiced by Horie Yui (堀江由衣), organized into 12 domains:
 
-- [`assets/audio/VO_gameplay/`](assets/audio/VO_gameplay): 146 files. Skill callouts, Burst lines, normal grunts, sprint lines, low HP warnings, and defeat clips.
-- [`assets/audio/VO_friendship/`](assets/audio/VO_friendship): 68 files. Profile voiceover lines, character stories, weather comments, and character discussions.
-- [`assets/audio/VO_COOP/`](assets/audio/VO_COOP): 247 files. Hangout Event Series VIII dialog lines across all five narrative endings.
-- [`assets/audio/VO_EQ/`](assets/audio/VO_EQ): 128 files. Version 3.6 event dialog lines (*A Parade of Providence*) recovered via remote HTTP Range requests.
-- [`assets/audio/vo_aq/`](assets/audio/vo_aq): 42 files. Archon Quest Interlude Act III (*Inversion of Genesis*) dialog tracks.
-- [`assets/audio/VO_Card/`](assets/audio/VO_Card): 38 files. Genius Invokation TCG match dialog, turn lines, and victory callouts.
-- [`assets/audio/VO_HS/`](assets/audio/VO_HS): 35 files. Serenitea Pot interactions and companion housing dialog.
-- [`assets/audio/VO_teamJoin/`](assets/audio/VO_teamJoin): 12 files. Party setup and switch-in voice tracks.
-- [`assets/audio/VO_LQ/`](assets/audio/VO_LQ): 28 files. Story Quest guest appearance voice lines.
-- [`assets/audio/VO_spice/`](assets/audio/VO_spice): 6 files. Food tasting reaction lines.
-- [`assets/audio/vo_freetalk/`](assets/audio/vo_freetalk): 38 files. Overworld ambient dialog and NPC interaction voice tracks.
-- [`assets/audio/VO_Tower/`](assets/audio/VO_Tower): 2 files. Spiral Abyss floor completion lines.
+- `assets/audio/VO_gameplay/`: 146 files. Skill callouts, Burst lines, normal grunts, sprint lines, low HP warnings, and defeat clips.
+- `assets/audio/VO_friendship/`: 68 files. Profile voiceover lines, character stories, weather comments, and character discussions.
+- `assets/audio/VO_COOP/`: 247 files. Hangout Event Series VIII dialog lines across all five narrative endings.
+- `assets/audio/VO_EQ/`: 128 files. Version 3.6 event dialog lines (*A Parade of Providence*) recovered via remote HTTP Range requests.
+- `assets/audio/vo_aq/`: 42 files. Archon Quest Interlude Act III (*Inversion of Genesis*) dialog tracks.
+- `assets/audio/VO_Card/`: 38 files. Genius Invokation TCG match dialog, turn lines, and victory callouts.
+- `assets/audio/VO_HS/`: 35 files. Serenitea Pot interactions and companion housing dialog.
+- `assets/audio/VO_teamJoin/`: 12 files. Party setup and switch-in voice tracks.
+- `assets/audio/VO_LQ/`: 28 files. Story Quest guest appearance voice lines.
+- `assets/audio/VO_spice/`: 6 files. Food tasting reaction lines.
+- `assets/audio/vo_freetalk/`: 38 files. Overworld ambient dialog and NPC interaction voice tracks.
+- `assets/audio/VO_Tower/`: 2 files. Spiral Abyss floor completion lines.
 
-### 4.2 Graphics ([`assets/textures/`](assets/textures))
+### 4.2 Graphics (`assets/textures/`)
 
 138 standalone UI textures (46.63 MB) organized into six categories:
 
-- [`assets/textures/portraits_and_branding/`](assets/textures/portraits_and_branding): 17 files. Character avatar icons, Gacha splash art, namecards, and constellation chapter crests.
-- [`assets/textures/hangout_cg/`](assets/textures/hangout_cg): 21 files. Full-screen memory CGs and preview cards for Faruzan's Hangout Event.
-- [`assets/textures/talents_and_skills/`](assets/textures/talents_and_skills): 19 files. Combat skill button textures, passive talent badges, and constellation icons.
-- [`assets/textures/tcg_cards/`](assets/textures/tcg_cards): 17 files. Genius Invokation TCG card faces, modification card faces, and status overlays.
-- [`assets/textures/event_ui_and_guides/`](assets/textures/event_ui_and_guides): 62 files. Archaeology tutorial slides, minigame cards, and radar map pointers.
-- [`assets/textures/furnishing_icons/`](assets/textures/furnishing_icons): 2 files. Serenitea Pot furnishing item icon and companion HUD sprite.
+- `assets/textures/portraits_and_branding/`: 17 files. Character avatar icons, Gacha splash art, namecards, and constellation chapter crests.
+- `assets/textures/hangout_cg/`: 21 files. Full-screen memory CGs and preview cards for Faruzan's Hangout Event.
+- `assets/textures/talents_and_skills/`: 19 files. Combat skill button textures, passive talent badges, and constellation icons.
+- `assets/textures/tcg_cards/`: 17 files. Genius Invokation TCG card faces, modification card faces, and status overlays.
+- `assets/textures/event_ui_and_guides/`: 62 files. Archaeology tutorial slides, minigame cards, and radar map pointers.
+- `assets/textures/furnishing_icons/`: 2 files. Serenitea Pot furnishing item icon and companion HUD sprite.
 
-### 4.3 Structured text ([`assets/text/`](assets/text))
+### 4.3 Structured text (`assets/text/`)
 
 4 structured JSON files documenting biographical data, audio registries, and limited events:
 
-- [`assets/text/faruzan_profile_and_lore.json`](assets/text/faruzan_profile_and_lore.json): Biographical profile, voice actors, Character Stories 1 through 5, and Vision lore.
-- [`assets/text/faruzan_voiceline_transcripts.json`](assets/text/faruzan_voiceline_transcripts.json): Registry indexing all 790 Japanese audio clips with trigger categories and transcription context.
-- [`assets/text/faruzan_limited_events_dialogue.json`](assets/text/faruzan_limited_events_dialogue.json): Event scripts across Versions 3.6, 4.4, 4.7, and 5.1.
-- [`assets/text/faruzan_furnishings_lore.json`](assets/text/faruzan_furnishings_lore.json): In-game lore, load stats, and adeptal energy numbers for Faruzan furnishings and gadgets.
+- `assets/text/faruzan_profile_and_lore.json`: Biographical profile, voice actors, Character Stories 1 through 5, and Vision lore.
+- `assets/text/faruzan_voiceline_transcripts.json`: Registry indexing all 790 Japanese audio clips with trigger categories and transcription context.
+- `assets/text/faruzan_limited_events_dialogue.json`: Event scripts across Versions 3.6, 4.4, 4.7, and 5.1.
+- `assets/text/faruzan_furnishings_lore.json`: In-game lore, load stats, and adeptal energy numbers for Faruzan furnishings and gadgets.
 
 ---
 
 ## 5. Category B: Dependent and compound assets inventory
 
-Category B assets require runtime engine linkages, skeleton graphs, or shader pipelines. They remain in their original relative paths under [`assets/`](assets).
+Category B assets require runtime engine linkages, skeleton graphs, or shader pipelines. They remain in their original relative paths under `assets/`.
 
 ### Cluster 1: Faruzan 3D character skeletal rig, meshes, and LODs
 
@@ -199,13 +199,13 @@ Primary playable character model assemblies:
 
 5 compound assets for the Faruzan Fungus doll:
 
-- **Visible mesh:** [`Beyd_Object_Prop_RenOu_01_Vo.obj`](assets/Mesh/Beyd_Object_Prop_RenOu_01_Vo.obj) (61,256 bytes).
-- **Collision mesh:** [`Beyd_Object_Prop_RenOu_01_Col.obj`](assets/Mesh/Beyd_Object_Prop_RenOu_01_Col.obj) (10,569 bytes).
+- **Visible mesh:** `Beyd_Object_Prop_RenOu_01_Vo.obj` (61,256 bytes).
+- **Collision mesh:** `Beyd_Object_Prop_RenOu_01_Col.obj` (10,569 bytes).
 - **Texture suite:**
-  - [`Beyd_Object_Prop_RenOu_01_Diffuse.png`](assets/Texture2D/Beyd_Object_Prop_RenOu_01_Diffuse.png)
-  - [`Beyd_Object_Prop_RenOu_01_Normal.png`](assets/Texture2D/Beyd_Object_Prop_RenOu_01_Normal.png)
-  - [`Beyd_Object_Prop_RenOu_01_SMBE.png`](assets/Texture2D/Beyd_Object_Prop_RenOu_01_SMBE.png)
-- **Material configuration:** [`Beyd_Object_Prop_RenOu_01.json`](assets/Material/Beyd_Object_Prop_RenOu_01.json)
+  - `Beyd_Object_Prop_RenOu_01_Diffuse.png`
+  - `Beyd_Object_Prop_RenOu_01_Normal.png`
+  - `Beyd_Object_Prop_RenOu_01_SMBE.png`
+- **Material configuration:** `Beyd_Object_Prop_RenOu_01.json`
 
 ### Cluster 8: Prop: Version 3.6 Omni-Directional Astrolabe Furnishing
 
