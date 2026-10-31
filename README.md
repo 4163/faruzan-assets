@@ -30,6 +30,7 @@ To keep git clones light (~175 MB), the 514 character animation clips (~1.98 GB 
 
 - **Skeletal hierarchy:** 87-node bone rig mapped to Unity Humanoid standard (`Bip001` -> `Pelvis` -> `Spine` -> `Spine1` -> `Spine2` -> `Neck` -> `Head`).
 - **Material parameters:** Dual-pass cel-shading pipeline binding diffuse albedo (`_DiffuseTex`), anisotropic hair highlights (`_Lightmap`), UV shadow ramp lookups (`_RampMap`), specular metallic mask (`_SMBE`), and procedural ink-line vertex extrusion maps (`Textureline`).
+- **HTTP range streaming:** Remote CDN zip central directory inspection and uncompressed WEM extraction protocol documented in [specs/recovery-methodology.md](specs/recovery-methodology.md).
 
 Full technical details and cluster bindings are documented in [specs/visualization-spec.md](specs/visualization-spec.md).
 
@@ -37,10 +38,9 @@ Full technical details and cluster bindings are documented in [specs/visualizati
 
 | Tool | Role | Repository / Reference |
 |---|---|---|
-| AnimeStudio CLI | Unity AssetBundle extraction for geometry, textures, materials, and physics | [Razmoth/AnimeStudio](https://github.com/Razmoth/AnimeStudio) |
-| vgmstream | Wwise WEM audio decoding and gallery stream transcoding | [vgmstream/vgmstream](https://github.com/vgmstream/vgmstream) |
 | REA | Extraction environment analysis, archive inspection, and pipeline management | [morluto/rea](https://github.com/morluto/rea) |
-| HTTP Range Streamer | Remote CDN zip central directory inspection and uncompressed WEM extraction | [specs/recovery-methodology.md](specs/recovery-methodology.md) |
+| AnimeStudio CLI | Unity AssetBundle extraction for geometry, textures, materials, and physics | [Escartem/AnimeStudio](https://github.com/Escartem/AnimeStudio) |
+| vgmstream | Wwise WEM audio decoding and gallery stream transcoding | [vgmstream/vgmstream](https://github.com/vgmstream/vgmstream) |
 
 ## Disclaimer
 
