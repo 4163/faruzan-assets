@@ -1,33 +1,33 @@
 {
   "pipeline_stage": "Stage 4: Presentation and visualization specification",
-  "stage_status": "Stage 4 visualization specification drafted: 13 Category B compound clusters mapped to concrete rendering pipelines, shader parameters, bone hierarchies, Spine 4.0 runtime bindings, and viewer architecture recommendations in specs/visualization-spec.md",
+  "stage_status": "Stage 4 visualization specification complete: 13 Category B compound clusters and 8 transform-dependent standalone assets mapped to concrete rendering pipelines, shader parameters, and viewer architecture in specs/visualization-spec.md",
   "scope_specification": {
     "target": "Faruzan",
     "avatar_id": 10000076,
-    "in_scope_audio": "Japanese (Horie Yui / 堀江由衣)",
+    "in_scope_audio": "Japanese (Horie Yui / \u5800\u6c5f\u7531\u8863)",
     "out_of_scope_audio": "English (Chandni Parekh), Chinese (Yan Meme), Korean (Kim Yu-rim) - Documented"
   },
   "identity_registry": {
     "entity_name": "Faruzan",
     "localized_names": {
       "en": "Faruzan",
-      "ja": "ファルザン",
-      "zh-cn": "珐露珊",
-      "zh-tw": "琺露珊",
-      "ko": "파루잔"
+      "ja": "\u30d5\u30a1\u30eb\u30b6\u30f3",
+      "zh-cn": "\u73d0\u9732\u73ca",
+      "zh-tw": "\u743a\u9732\u73ca",
+      "ko": "\ud30c\ub8e8\uc794"
     },
     "titles": {
       "en": "Enigmatic Machinist",
-      "ja": "機巧の深思",
-      "zh-cn": "机巧全书",
-      "ko": "기교의 심오함"
+      "ja": "\u6a5f\u5de7\u306e\u6df1\u601d",
+      "zh-cn": "\u673a\u5de7\u5168\u4e66",
+      "ko": "\uae30\uad50\uc758 \uc2ec\uc624\ud568"
     },
     "honorifics": [
       "Madam Faruzan",
       "Senior",
-      "先輩",
-      "先辈",
-      "선배"
+      "\u5148\u8f29",
+      "\u5148\u8f88",
+      "\uc120\ubc30"
     ],
     "avatar_id": 10000076,
     "avatar_slug": "Faruzan",
@@ -43,7 +43,7 @@
     "voice_actors": {
       "ja": {
         "name": "Horie Yui",
-        "native": "堀江由衣",
+        "native": "\u5800\u6c5f\u7531\u8863",
         "scope": "in_scope"
       },
       "en": {
@@ -53,12 +53,12 @@
       },
       "zh": {
         "name": "Yan Meme",
-        "native": "阎么么",
+        "native": "\u960e\u4e48\u4e48",
         "scope": "out_of_scope"
       },
       "ko": {
         "name": "Kim Yu-rim",
-        "native": "김유림",
+        "native": "\uae40\uc720\ub9bc",
         "scope": "out_of_scope"
       }
     }
@@ -103,12 +103,14 @@
       "minigame_state_models": 1
     },
     "dual_use_items_cataloged": 5,
-    "deliverable_spec": "specs/dependent-assets.md"
+    "deliverable_spec": "specs/dependent-assets.md",
+    "transform_dependent_standalones_cataloged": 8
   },
   "stage_4_metrics": {
     "compound_clusters_specified": 13,
     "total_compound_assets": 728,
     "spine_runtime_version": "4.0.47",
-    "deliverable_spec": "specs/visualization-spec.md"
+    "deliverable_spec": "specs/visualization-spec.md",
+    "standalone_presentation_transforms_specified": 8
   }
 }

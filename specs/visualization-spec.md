@@ -241,6 +241,66 @@ To render these compound assets accurately, runtimes must match the original eng
 
 ---
 
+### 3.4 Transform-dependent standalone graphics: Genius Invokation TCG card face
+
+Standard non-dynamic card face textures in `assets/textures/tcg_cards/` (such as `Gcg_CardFace_Char_Avatar_Faruzan_Layer00.png`) are stored in $1024 \times 1024$ power-of-two square textures with overscan margins for engine parallax. Viewing them raw displays a $1.5\times$ horizontal stretch.
+
+#### Bounding box and aspect parameters
+- Texture dimensions: $1024 \times 1024$ RGBA
+- Active illustration rectangle: $x \in [158, 865]$ (width $707$ px), $y \in [108, 916]$ (height $808$ px)
+- Overscan margins: $158$ px left and right ($\Delta u \approx 0.1544$), $108$ px top and bottom ($\Delta v \approx 0.1055$)
+- Target display aspect ratio: $7:12$ ($420 \times 720$ px, matching `UI_Gcg_CardFace_Char_Avatar_Faruzan.png`)
+
+#### 2D viewport reconstruction function
+
+```python
+from PIL import Image
+
+def reconstruct_card_face(layer00_path, target_width=420, target_height=720):
+    img = Image.open(layer00_path)
+    # Crop out overscan margins
+    cropped = img.crop((158, 108, 865, 916))  # 707 x 808
+    # Correct 1.5x horizontal stretch to 7:12 card aspect ratio
+    card_face = cropped.resize((target_width, target_height), Image.Resampling.LANCZOS)
+    return card_face
+```
+
+#### In-engine UV mapping formula
+
+The 3D card mesh quad has physical aspect ratio $7:12$. The vertex stage passes normalized UV coordinates across the active face:
+
+$$\text{UV}_{\text{base}} = \begin{bmatrix} 0.1544 + \text{uv.x} \cdot 0.6903 \\ 0.1055 + \text{uv.y} \cdot 0.7890 \end{bmatrix}$$
+
+$$\text{UV}_{\text{sampled}} = \text{UV}_{\text{base}} + \mathbf{V}_{xy} \cdot \text{ParallaxScale0} \cdot \text{ParallaxMultiplier}$$
+
+Where $\mathbf{V}_{xy}$ is the tangent-space view direction, and $\text{ParallaxScale0} = 0.2$.
+
+---
+
+### 3.5 Specialized standalone graphic handling
+
+A systematic audit across all 138 standalone texture files in `assets/textures/` identified the following presentation handling rules:
+
+#### 1. Namecard dual-layer presentation
+- **Profile card background:** `UI_NameCardPic_Faruzan_P.png` ($840 \times 400$, aspect ratio $2.1:1$). Rendered as the full-width background plate for user profile headers.
+- **Chat and signature ribbon:** `UI_NameCardPic_Faruzan_Alpha.png` ($898 \times 140$, aspect ratio $6.41:1$). Not a grayscale alpha mask; rendered as a standalone horizontal banner strip across chat headers, multiplayer lobbies, and signature docks.
+
+#### 2. Multi-layer 2.5D TCG parallax cards
+- **Talent card:** `Gcg_CardFace_Modify_Talent_Faruzan_Layer00` through `Layer02` ($1024 \times 1024$).
+- **Summon card:** `Gcg_CardFace_Summon_Faruzan_Layer00` through `Layer02` ($1024 \times 1024$).
+- **Stacking order:** Layer 00 (background), Layer 01 (midground subject cutout), Layer 02 (foreground VFX overlay).
+- **Parallax scales:** Layer 00 uses `_ParallaxScale0: 0.2`, Layer 01 uses `_ParallaxScale1: 0.1`, Layer 02 uses `_ParallaxScale2: 0.025`.
+- **2D representation:** For flat 2D display, use the pre-composited UI sprites (`UI_Gcg_CardFace_Modify_Talent_Faruzan.png`, `UI_Gcg_CardFace_Summon_Faruzan.png`), or crop the active frame $[148, 102, 868, 919]$ and resample to $7:12$.
+
+#### 3. Sprite atlas containers
+- `SpriteAtlasTexture-ui_sprite_activity_akafes_reasoning-1024x1024-fmt25.png` and `512x512-fmt25.png`: Raw Unity SpriteAtlas sheets. All individual icons (`UI_Frm_AkaFes_Reasoning_*`, `UI_Icon_AkaFes_Reasoning_Bufficon.png`) are already cleanly unpacked into discrete PNG files in `assets/textures/event_ui_and_guides/`.
+
+#### 4. UI shader flow and distortion maps
+- `Eff_UI_AkaFesMainPage_StageYellow_UV02.png` ($512 \times 256$), `UV06.png` ($256 \times 512$), and `UVBall.png` ($256 \times 256$).
+- Non-color vector maps: Red and Green channels drive tangent UV displacement and scrolling distortion in event UI shaders.
+
+---
+
 ## 4. Standalone viewer repository blueprint
 
 An independent viewer application for this project can be structured as follows:

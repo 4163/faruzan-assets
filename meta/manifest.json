@@ -13063,7 +13063,9 @@
       "category": "texture_ui",
       "extension": ".png",
       "bytes": 708578,
-      "sha256": "a43eb46b5e95bc0ca8b39c21ef992abc2c4eebdd6b6f560bca5d49ecdbc22eff"
+      "sha256": "a43eb46b5e95bc0ca8b39c21ef992abc2c4eebdd6b6f560bca5d49ecdbc22eff",
+      "transform_dependent": true,
+      "target_aspect_ratio": "7:12"
     },
     {
       "name": "Gcg_CardFace_Modify_Talent_Faruzan_Layer01.png",
@@ -13071,7 +13073,9 @@
       "category": "texture_ui",
       "extension": ".png",
       "bytes": 187594,
-      "sha256": "d76877ba886a79d908d0f3c2f276c8d62d1d17f04e95404543c0c82f7f73f6ab"
+      "sha256": "d76877ba886a79d908d0f3c2f276c8d62d1d17f04e95404543c0c82f7f73f6ab",
+      "transform_dependent": true,
+      "target_aspect_ratio": "7:12"
     },
     {
       "name": "Gcg_CardFace_Modify_Talent_Faruzan_Layer02.png",
@@ -13079,7 +13083,9 @@
       "category": "texture_ui",
       "extension": ".png",
       "bytes": 138969,
-      "sha256": "2eae367c1b6239d868e701aba2ad48ce5435e886ef9b52e957e205cec7ee331d"
+      "sha256": "2eae367c1b6239d868e701aba2ad48ce5435e886ef9b52e957e205cec7ee331d",
+      "transform_dependent": true,
+      "target_aspect_ratio": "7:12"
     },
     {
       "name": "Skill_E_Faruzan_01.png",
@@ -13215,7 +13221,9 @@
       "category": "texture_ui",
       "extension": ".png",
       "bytes": 909146,
-      "sha256": "4c12b399ae49c4349e9450ff2a772a347646f3e2c4221d6ec088bd67e472db6a"
+      "sha256": "4c12b399ae49c4349e9450ff2a772a347646f3e2c4221d6ec088bd67e472db6a",
+      "transform_dependent": true,
+      "target_aspect_ratio": "7:12"
     },
     {
       "name": "Gcg_CardFace_Char_Avatar_Faruzan_Spine.png",
@@ -13231,7 +13239,9 @@
       "category": "texture_ui",
       "extension": ".png",
       "bytes": 191172,
-      "sha256": "d34971ba63b09b101a7a024a52e0597173991798e6095b5e290fc0e863205554"
+      "sha256": "d34971ba63b09b101a7a024a52e0597173991798e6095b5e290fc0e863205554",
+      "transform_dependent": true,
+      "target_aspect_ratio": "7:12"
     },
     {
       "name": "Gcg_CardFace_Summon_Faruzan_Layer00.png",
@@ -13239,7 +13249,9 @@
       "category": "texture_ui",
       "extension": ".png",
       "bytes": 660227,
-      "sha256": "f570c0fe8f715ef62ea64c387d9784ab57e82819c37ed505d2a20e204719609a"
+      "sha256": "f570c0fe8f715ef62ea64c387d9784ab57e82819c37ed505d2a20e204719609a",
+      "transform_dependent": true,
+      "target_aspect_ratio": "7:12"
     },
     {
       "name": "Gcg_CardFace_Summon_Faruzan_Layer01.png",
@@ -13247,7 +13259,9 @@
       "category": "texture_ui",
       "extension": ".png",
       "bytes": 500859,
-      "sha256": "584db9f321eeca2f93efe08d2a63cb5f1a8d296191495260835e902b75b18290"
+      "sha256": "584db9f321eeca2f93efe08d2a63cb5f1a8d296191495260835e902b75b18290",
+      "transform_dependent": true,
+      "target_aspect_ratio": "7:12"
     },
     {
       "name": "Gcg_CardFace_Summon_Faruzan_Layer02.png",
@@ -13255,7 +13269,9 @@
       "category": "texture_ui",
       "extension": ".png",
       "bytes": 207556,
-      "sha256": "5bb111bbb1f4e64ebdb1921c587a85a862d4fe5ae2b2dfb05118d06623d78f58"
+      "sha256": "5bb111bbb1f4e64ebdb1921c587a85a862d4fe5ae2b2dfb05118d06623d78f58",
+      "transform_dependent": true,
+      "target_aspect_ratio": "7:12"
     },
     {
       "name": "UI_Gcg_CardFace_Char_Avatar_Faruzan.png",

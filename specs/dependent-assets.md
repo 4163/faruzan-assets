@@ -260,9 +260,18 @@ Dual-use assets stand alone as visual media, but also serve as direct components
 |---|---|---|---|
 | `UI_Homeworld_Ani_Exterior_Ndkl_Decoration_Prop_Renou_01.png` | `assets/textures/furnishing_icons/` | Cluster 7: Puzzlepal Furnishing | Furnishing blueprint, shop preview, and placement indicator icon. |
 | `UI_Beyd_Gadget_Prop_RenOu_01.png` | `assets/textures/furnishing_icons/` | Cluster 7: Puzzlepal Furnishing | Minigame exploration companion HUD activation sprite. |
-| `Gcg_CardFace_Char_Avatar_Faruzan_Layer00.png` | `assets/textures/tcg_cards/` | Cluster 12: 2D Spine Puppet | Base illustration layer behind dynamic Spine skeletal cutouts. |
 | `UI_CoopCutScene_Faruzan_C01` through `C05` | `assets/textures/hangout_cg/` | Cluster 3: Hangout Cutscenes | Full-screen story climax stills rendered in narrative dialogue trees. |
 | `UI_Tutorial_AkaFesArchaeology_01` through `05` | `assets/textures/event_ui_and_guides/` | Cluster 9: Archaeological Detector | Tutorial banner billboard textures displayed alongside probe HUD. |
+
+### Transform-dependent standalone graphics
+
+Assets organized in `assets/textures/` that require presentation transforms (such as overscan crop bounds or aspect ratio compensation) to render accurately outside the engine:
+
+| Asset file | Organized location | Engine context | Transform requirements |
+|---|---|---|---|
+| `Gcg_CardFace_Char_Avatar_Faruzan_Layer00.png` | `assets/textures/tcg_cards/` | Material `Gcg_CardFace_Char_Avatar_Faruzan_Normal` | Active frame `[158, 108, 865, 916]` (707 x 808 px), 1.5x horizontal stretch on 1024 x 1024 canvas with overscan parallax margins. Resample crop to 7:12 (420 x 720). |
+| `Gcg_CardFace_Summon_Faruzan_Layer00` through `Layer02` | `assets/textures/tcg_cards/` | Material `Gcg_CardFace_Summon_Faruzan_Normal` | Multi-layer 2.5D parallax layers with overscan margins. |
+| `Gcg_CardFace_Modify_Talent_Faruzan_Layer00` through `Layer02` | `assets/textures/talents_and_skills/` | Material `Gcg_CardFace_Modify_Talent_Faruzan_Normal` | Multi-layer 2.5D parallax layers with overscan margins. |
 
 ---
 

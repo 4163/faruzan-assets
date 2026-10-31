@@ -174,9 +174,26 @@ Entities, props, UI representations, and environmental items tied to Faruzan.
   - Gacha thumbnail: `UI_Gacha_AvatarIcon_Faruzan.png`
 - **Namecard:**
   - Asset ID: `210144`
-  - Namecard graphic: `UI_NameCardPic_Faruzan_P.png`
+  - Namecard profile banner: `UI_NameCardPic_Faruzan_P.png` (840x400 full profile card background)
+  - Namecard ribbon strip: `UI_NameCardPic_Faruzan_Alpha.png` (898x140 chat, party, and signature bar)
   - Namecard icon: `UI_NameCardIcon_Faruzan.png`
   - Description text: The secret of the ancient ruins sealed for a century.
+- **Genius Invokation TCG card suite:**
+  - Character card:
+    - 2D UI card sprite: `UI_Gcg_CardFace_Char_Avatar_Faruzan.png` (420x720)
+    - 3D static card face layer: `Gcg_CardFace_Char_Avatar_Faruzan_Layer00.png` (1024x1024, anamorphic square with overscan parallax margins)
+    - Dynamic Spine puppet: `Gcg_CardFace_Char_Avatar_Faruzan_Spine.png`, `Gcg_CardFace_Char_Avatar_Faruzan_Spine_Bg.png`, `Gcg_CardFace_Char_Avatar_Faruzan_Spine.skel`
+    - Badges and icons: `UI_Gcg_CardFace_Char_Avatar_Faruzan_Golden.png`, `UI_Gcg_CardFace_Char_Avatar_Faruzan_Platinum.png`, `UI_Gcg_History_Char_Avatar_Faruzan.png`, `UI_Gcg_Char_AvatarIcon_Faruzan.png`
+  - Equipment / Talent card:
+    - 2D UI card sprite: `UI_Gcg_CardFace_Modify_Talent_Faruzan.png` (420x720)
+    - 3D parallax layers: `Gcg_CardFace_Modify_Talent_Faruzan_Layer00` through `Layer02` (1024x1024)
+    - Badges and history: `UI_Gcg_CardFace_Modify_Talent_Faruzan_Golden.png`, `UI_Gcg_CardFace_Modify_Talent_Faruzan_Platinum.png`, `UI_Gcg_History_Modify_Talent_Faruzan.png`
+  - Summon card (Dazzling Polyhedron):
+    - 2D UI card sprite: `UI_Gcg_CardFace_Summon_Faruzan.png` (420x720)
+    - 3D parallax layers: `Gcg_CardFace_Summon_Faruzan_Layer00` through `Layer02` (1024x1024)
+    - History icons: `UI_Gcg_History_Summon_Faruzan.png`, `UI_Gcg_History_Summon_Faruzan_S.png`
+  - Debuff icon: `UI_Gcg_Debuff_Faruzan_E.png`
+  - Match voicelines: 18 audio lines in `assets/audio/VO_Card/VO_faruzan/`
 - **Hangout memory CGs:**
   - `UI_Hangout_Faruzan_End_01.png` (Stories of the Past)
   - `UI_Hangout_Faruzan_End_02.png` (Akademiya Q&A)
