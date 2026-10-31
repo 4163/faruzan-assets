@@ -120,9 +120,9 @@ All Japanese voice tracks are packed as `.wem` files across `AudioAssets/Japanes
   - Archon Quest Interlude Act III (*Inversion of Genesis*) dialogue tracks.
   - Hangout Event Series VIII (*A Confounding Conundrum*) dialogue trees across all 5 branches.
   - Event dialogue: Version 3.6 *A Parade of Providence* (Akademiya Extravaganza Interdarshan Championship).
-    - Status: 128 voice lines were purged from the live 7.1 client packages. They have been recovered directly from HoYoverse's official CDN `Audio_Japanese_3.6.0.zip` using remote HTTP Range streaming. See [recovery-methodology.md](specs/recovery-methodology.md) for full procedural documentation.
+    - Status: 128 voice lines were purged from the live 7.1 client packages. They have been recovered directly from HoYoverse's official CDN `Audio_Japanese_3.6.0.zip` using remote HTTP Range streaming. See [recovery-methodology.md](recovery-methodology.md) for full procedural documentation.
     - Note on remaining 131 event lines: 131 lines belonging to subsequent events released after v3.6 (v4.4 Lantern Rite `hzweq`, Sabzeruz Festival `HSEQ`, Moonchase `ZFEQ`) remain purged from the live client and are documented for completeness.
-    - Full limited events mapping: For the complete event inventory, cutscenes, furnishings (Puzzlepal), and minigames across all patches, see [limited-events-mapping.md](specs/limited-events-mapping.md).
+    - Full limited events mapping: For the complete event inventory, cutscenes, furnishings (Puzzlepal), and minigames across all patches, see [limited-events-mapping.md](limited-events-mapping.md).
 
 ### Out-of-scope audio assets (documented per instruction)
 These voice lines exist in the game distribution but are excluded from extraction:
