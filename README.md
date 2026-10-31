@@ -39,7 +39,7 @@ Full technical details and cluster bindings are documented in [specs/visualizati
 |---|---|---|
 | AnimeStudio CLI | Unity AssetBundle extraction for geometry, textures, materials, and physics | [Razmoth/AnimeStudio](https://github.com/Razmoth/AnimeStudio) |
 | vgmstream | Wwise WEM audio decoding and gallery stream transcoding | [vgmstream/vgmstream](https://github.com/vgmstream/vgmstream) |
-| REA | Extraction environment analysis, archive inspection, and pipeline management | [4163/i-asset-extraction](https://github.com/4163/i-asset-extraction) |
+| REA | Extraction environment analysis, archive inspection, and pipeline management | [morluto/rea](https://github.com/morluto/rea) |
 | HTTP Range Streamer | Remote CDN zip central directory inspection and uncompressed WEM extraction | [specs/recovery-methodology.md](specs/recovery-methodology.md) |
 
 ## Disclaimer
